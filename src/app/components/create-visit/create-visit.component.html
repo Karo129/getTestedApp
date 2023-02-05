@@ -1,0 +1,35 @@
+<div class="card bg-light">
+    <div class="card-body">
+        <h5 class="card-title text-center">Choose your tests</h5>
+        <div *ngIf="incorrectForm" class="text-center">
+            <span class="badge text-bg-danger">ALL FIELDS ARE REQUIRED</span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="name">Name</label>
+            <input type="text" id="name" [(ngModel)]="name" class="form-control" placeholder="write your name">
+        </div>
+        <div class="form-group mb-3">
+            <label for="date">Date</label>
+            <input type="date" id="date" [(ngModel)]="date"  class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="time">Time</label>
+            <input type="time" id="time" [(ngModel)]="time"  class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <select name="test" class="form-select" [(ngModel)]="chosenTest">
+                <option [value]="test.name" *ngFor="let test of tests">{{test.name}}</option>
+              </select>
+        </div>
+
+        <!-- <div class="form-group">
+            <select name="pais" [(ngModel)]="paisSeleccionado" class="form-control form-control-lg">
+              <option [value]="pais.value" *ngFor="let pais of paises">{{ pais.nombre }}</option>
+            </select>
+          </div> -->
+
+       
+
+        <button style="width: 100%;" (click)="confirm()" class="btn btn-primary btn-block">Confirm</button>
+    </div>
+</div>

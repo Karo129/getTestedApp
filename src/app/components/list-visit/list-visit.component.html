@@ -1,0 +1,14 @@
+<div *ngIf="allvisitlist.length===0 " class="card bg-light">
+    <div class="card-body">
+        <h5 class="card-title text-center">No appointments to show</h5>
+    </div>
+</div>
+<div *ngFor="let visit of allvisitlist; let i = index" class="card mb-2">
+    <div class="card-body">
+        <p class="card-text"><span>Name: </span>{{ visit.name}}</p>
+        <p class="card-text"><span>Date: </span>{{ visit.date}}</p>
+        <p class="card-text"><span>Time: </span>{{ visit.time }}</p>
+        <p class="card-text"><span>Tests: </span>{{ visit.test }}</p>
+        <button style="width: 100%;"  class="btn btn-danger btn-block" (click)="clearVisit( i)" >Clear</button>
+    </div>
+</div>
