@@ -7,6 +7,7 @@ import { Visit } from 'src/app/models/visit.interface';
   templateUrl: './create-visit.component.html',
   styleUrls: ['./create-visit.component.css'],
 })
+
 export class CreateVisitComponent {
   name = '';
   date = '';
@@ -47,7 +48,7 @@ export class CreateVisitComponent {
       time: this.time,
       test: this.chosenTest,
     };
-    //  console.log(confirmedVisit)
+
     this.newVisit.emit(confirmedVisit);
     this.resetFields();
   }

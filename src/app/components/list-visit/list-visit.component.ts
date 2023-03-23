@@ -12,14 +12,13 @@ export class ListVisitComponent implements OnInit{
   @Output() deleteVisit = new EventEmitter<number>();
 
   constructor(){}
-  ngOnInit():void{
-
-  }
+  ngOnInit():void{}
 
  clearVisit(index: number){
   console.log('clear', index);
   this.deleteVisit.emit(index);
  }
+ 
 }
 
 

@@ -1,5 +1,7 @@
-<div class="card bg-light">
-    <div class="card-body">
+<main class="card bg-light">
+
+    <section class="card-body">
+
         <h5 class="card-title text-center">Choose your tests</h5>
         <div *ngIf="incorrectForm" class="text-center">
             <span class="badge text-bg-danger">ALL FIELDS ARE REQUIRED</span>
@@ -22,14 +24,7 @@
               </select>
         </div>
 
-        <!-- <div class="form-group">
-            <select name="pais" [(ngModel)]="paisSeleccionado" class="form-control form-control-lg">
-              <option [value]="pais.value" *ngFor="let pais of paises">{{ pais.nombre }}</option>
-            </select>
-          </div> -->
-
-       
-
         <button style="width: 100%;" (click)="confirm()" class="btn btn-primary btn-block">Confirm</button>
-    </div>
-</div>
+        
+    </section>
+</main>
